@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "marcellus";
+    src: url(./Font-Family/Marcellus-Regular.ttf);
+}
+@font-face {
+    font-family: "lato";
+    src: url(./Font-Family/Lato-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "marcellus";
+}
+header{
+    height: 100px;
+    background-color: white;
+    
+}
+nav{
+    display: flex;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+    flex: 30%;
+    padding: 1rem;
+}
+#nav-logo>img{
+    height: 60px;
+    width: 130px;
+
+}
+#links-list{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+    padding-right: 200px;
+}
+#links-list>li>a{
+    font-family: "lato";
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+#Reservation-btn{
+    height: 55px;
+    width: 200px;
+    font-family: "lato";
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 40px;
+    background-color: #E7272D;
+    color: white;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+#Reservation-btn:hover{
+    background-color: black;
+    color: white;
+}
+
+
