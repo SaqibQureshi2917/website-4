@@ -1,64 +1,481 @@
 @font-face {
-    font-family: "marcellus";
-    src: url(./Font-Family/Marcellus-Regular.ttf);
+  font-family: "marcellus";
+  src: url(./Font-Family/Marcellus-Regular.ttf);
 }
 @font-face {
-    font-family: "lato";
-    src: url(./Font-Family/Lato-Regular.ttf);
+  font-family: "lato";
+  src: url(./Font-Family/Lato-Regular.ttf);
 }
-*{
-    margin: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "marcellus";
+}
+/* ===================================================== Header Section Styling started =====================================================  */
+header {
+  height: 100px;
+}
+nav {
+  width: 100%;
+  display: flex;
+  height: 100px;
+  justify-content: space-around;
+  align-items: center;
+  flex: 30%;
+  padding: 1rem;
+  position: fixed;
+  z-index: 10;
+  background-color: white;
+}
+#menu-icon img {
+  height: 30px;
+  display: none;
+}
+#nav-logo > img {
+  width: 30%;
+  height: 60px;
+  width: 130px;
+}
+
+#links-list {
+  display: flex;
+  width: 40%;
+  align-items: center;
+  gap: 50px;
+  list-style: none;
+  padding-right: 200px;
+}
+#links-list > li > a {
+  font-family: "lato";
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+#cart-icon {
+  background-image: url(./Assets/Navbar-section/cart.svg);
+  background-size: cover;
+  background-position: center;
+  width: 65px;
+  height: 65px;
+}
+#cart-icon > p {
+  font-family: "Courier New", Courier, monospace;
+  background-color: red;
+  transform: translate(180%);
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 600;
+  padding: 4px;
+  color: white;
+  display: inline-block;
+}
+#Reservation-btn {
+  width: 30%;
+  height: 55px;
+  width: 200px;
+  font-family: "lato";
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 40px;
+  background-color: #e7272d;
+  color: white;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+#Reservation-btn:hover {
+  background-color: black;
+  color: white;
+}
+/* ===================================================== Header Styling Section end =====================================================  */
+
+/* ===================================================== Hero Section Styling started =====================================================  */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.carousel {
+  position: relative;
+  width: 94%;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  border-radius: 10px;
+  object-fit: cover;
+}
+.slide > div {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.hero-right-side-div > img {
+  height: 400px;
+}
+#content > img {
+  height: 350px;
+}
+
+.discout-pic > div {
+  height: 250px;
+  width: 250px;
+  background-color: #e7272d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(
+    50% 0%,
+    /* top middle */ 93.3% 25%,
+    /* top-right */ 93.3% 75%,
+    /* bottom-right */ 50% 100%,
+    /* bottom middle */ 6.7% 75%,
+    /* bottom-left */ 6.7% 25% /* top-left */
+  );
+}
+
+.buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.buttons button {
+  background: rgba(255, 255, 255, 0.47);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+/* ===================================================== Hero Section Styling End =====================================================  */
+
+/* ===================================================== About Section Styling Started =====================================================  */
+.about-us {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+  padding-bottom: 140px;
+  position: relative;
+  z-index: 1;
+}
+#patta {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  height: 250px;
+  z-index: -2;
+}
+#tomato {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  z-index: -2;
+}
+.section-top {
+  display: flex;
+}
+.section-heading {
+  width: 50%;
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+}
+.about-content-div {
+  height: 450px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.about1-pic {
+  height: 100%;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.about1-pic > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+}
+.about2-pic {
+  height: 100%;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.burgers-types {
+  height: 140px;
+  width: 100%;
+  background-color: #e7272d;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.burgers-types > h1,
+.burgers-types > p {
+  color: white;
+}
+.burgers-types > h1 {
+  font-size: 46px;
+}
+.about2-pic img {
+  height: 280px;
+  width: 100%;
+  border-radius: 25px;
+}
+.about-div {
+  height: 100%;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: space-between;
+}
+.about-div > p {
+  color: rgb(93, 91, 91);
+  font-size: 15px;
+  margin-left: 10px;
+}
+.about-div-detail {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(117, 115, 115);
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+}
+.about-div-detail h2 {
+  margin-bottom: 10px;
+}
+.about-div-detail-pic-icon {
+  background-color: black;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 50%;
+}
+.delivary {
+  margin-top: 20px;
+  border-right: none;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.authentic {
+  border-left: none;
+  border-top: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.about-div-detail-pic-icon > img {
+  height: 80px;
+}
+/* ===================================================== About Section Styling End =====================================================  */
+@media (max-width: 1200px) {
+  .hero-right-side-div {
+    margin-left: 50px;
+  }
+
+  .section-heading {
+    width: 60%;
+  }
+  .about1-pic {
+    width: 400px;
+  }
+  .about2-pic {
+    width: 300px;
+  }
+  #tomato {
+    display: none;
+  }
+  #patta {
+    display: none;
+  }
+  .about-div {
+    width: 80%;
+  }
+  .delivary {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 992px) {
+  nav {
+    justify-content: space-between;
+  }
+  #menu-icon img {
+    display: block;
+  }
+  #links-list {
+    display: none;
+  }
+  #Reservation-btn {
+    display: none;
+  }
+  .hero-section {
     padding: 0;
-    box-sizing: border-box;
-    font-family: "marcellus";
-}
-header{
+  }
+  .carousel {
+    height: 450px;
+  }
+  .hero-right-side-div > img {
+    height: 300px;
+  }
+  .discout-pic > div {
+    height: 180px;
+    width: 180px;
+  }
+  .discout-pic img {
     height: 100px;
-    background-color: white;
-    
+    width: 100px;
+  }
+  .section-top {
+    margin-top: 30px;
+  }
+.about-div{
+  width: 100%;
 }
-nav{
-    display: flex;
-    height: 100px;
-    justify-content: space-around;
-    align-items: center;
-    flex: 30%;
-    padding: 1rem;
+.about-div>p{
+  margin-top: 40px;
+  width: 80%;
 }
-#nav-logo>img{
-    height: 60px;
-    width: 130px;
-
+  .about-div-detail {
+    width: 90%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .about-div-detail-pic-detail{
+    text-align: start;
+    padding-left: 20px;
+  }
 }
-#links-list{
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    list-style: none;
-    padding-right: 200px;
+@media (max-width: 768px) {
+  .carousel {
+    height: 350px;
+    width: 100%;
+    border-radius: 0;
+  }
+  .hero-right-side-div > img {
+    height: 200px;
+  }
+  .discout-pic > div {
+    height: 160px;
+    width: 160px;
+  }
+  .section-top {
+    font-size: 20px;
+  }
+  .section-heading {
+    width: 80%;
+  }
+  .about-content-div {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 100px;
+  }
+  .about1-pic {
+    height: 600px;
+    width: 70%;
+  }
+  .about2-pic {
+    height: 600px;
+    width: 60%;
+  }
+  .burgers-types {
+    height: 200px;
+  }
+  .about2-pic img {
+    height: 340px;
+  }
 }
-#links-list>li>a{
-    font-family: "lato";
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
+@media (max-width: 578px) {
+  .carousel {
+    height: 350px;
+  }
+  .hero-right-side-div {
+    margin-left: 20px;
+  }
+  .hero-right-side-div > img {
+    height: 35vw;
+  }
+  .discout-pic > div {
+    height: 25vw;
+    width: 25vw;
+  }
+  .discout-pic img {
+    height: 18vw;
+  }
+  .section-top {
+    font-size: 6vw;
+  }
+  .section-top img {
+    display: none;
+  }
+  .section-heading {
+    width: 100%;
+    font-size: 8vw;
+  }
+  .about1-pic {
+    height: 130vw;
+    width: 97%;
+  }
+  .about2-pic {
+    height: 130vw;
+    width: 97%;
+  }
+  .burgers-types {
+    height: 40vw;
+  }
+  .about2-pic img {
+    height: 80vw;
+  }
+  .about-div {
+    width: 100%;
+  }
+  .about-div>p{
+  width: 90%;
 }
-#Reservation-btn{
-    height: 55px;
-    width: 200px;
-    font-family: "lato";
-    border: none;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 40px;
-    background-color: #E7272D;
-    color: white;
-    display: inline-block;
-    transition: all 0.3s ease-in-out;
+  .about-div-detail {
+    width: 90%;
+  }
 }
-#Reservation-btn:hover{
-    background-color: black;
-    color: white;
-}
-
-

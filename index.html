@@ -3,29 +3,160 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Reston</title>
+    <link rel="shortcut icon" href="./Assets/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- ===================================================== Header Section started ===================================================== -->
     <header>
       <nav>
+        <div id="menu-icon">
+          <img src="./Assets/Navbar-section/menu.svg" alt="" />
+        </div>
         <div id="nav-logo">
           <img src="./Assets/logo-2.png" alt="" />
         </div>
-        <div>
-          <ul id="links-list">
-            <li><a href="#home-section">Home</a></li>
-            <li><a href="#">Pages</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Blogs</a></li>
-            <li><a href="#">Shops</a></li>
-          </ul>
+
+        <ul id="links-list">
+          <li><a href="#home-section">Home</a></li>
+          <li><a href="#">Pages</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Blogs</a></li>
+          <li><a href="#">Shops</a></li>
+        </ul>
+        <!-- <img id="cart-icon" src="./Assets/Navbar-section/cart.svg" alt=""> -->
+        <div id="cart-icon">
+          <p>3</p>
         </div>
-        <div>
-          <img src="" alt="" />
-          <button id="Reservation-btn">Reservation</button>
-        </div>
+        <button id="Reservation-btn">Reservation</button>
       </nav>
     </header>
+    <!-- ===================================================== Header Section End ===================================================== -->
+
+    <!-- ===================================================== Main Section started ===================================================== -->
+    <main>
+      <!-- ===================================================== Hero Section in Main Section started ===================================================== -->
+      <section class="hero-section">
+        <div class="carousel">
+          <div
+            class="slide active"
+            style="background-image: url('./Assets/hero-section/1.jpeg')"
+          >
+            <div class="hero-right-side-div">
+              <img src="./Assets/hero-section/content.png" alt="" />
+            </div>
+            <div class="discout-pic">
+              <div>
+                <img src="./Assets/hero-section/12nd.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div
+            class="slide"
+            style="background-image: url('./Assets/hero-section/2.jpeg')"
+          >
+            <div id="content">
+              <img
+                src="./Assets/hero-section/content2.png"
+                alt="Foreground 2"
+              />
+            </div>
+            <div class="discout-pic">
+              <div>
+                <img src="./Assets/hero-section/12nd.png" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="buttons">
+            <button id="prev">&#10094;</button>
+            <button id="next">&#10095;</button>
+          </div>
+        </div>
+      </section>
+      <!-- ===================================================== Hero Section in Main Section End ===================================================== -->
+
+      <section class="about-us">
+        <h1 class="section-top">
+          <span>
+            <img src="./Assets/About-section/left.png" alt="" />
+          </span>
+          ABOUT US
+          <span>
+            <img src="./Assets/About-section/right.png" alt="" />
+          </span>
+        </h1>
+        <h1 class="section-heading">
+          The best burgers offer a combination of tastes.
+        </h1>
+        <div class="about-content-div">
+          <div class="about1-pic">
+            <img src="./Assets/About-section/about1.jpeg" alt="" />
+          </div>
+          <div class="about2-pic">
+            <div class="burgers-types">
+              <h1>18+</h1>
+              <p>Types of burger</p>
+            </div>
+            <div>
+              <img src="./Assets/About-section/about2.jpeg" alt="" />
+            </div>
+          </div>
+          <div class="about-div">
+            <p>
+              New had happen unable uneasy. Drawings can followed improved out
+              sociable not. Earnestly so do instantly pretended. See general few
+              civilly amiable pleased account carried. Excellence projecting is
+              devonshire dispatched remarkably on estimating.
+            </p>
+            <div class="about-div-detail delivary">
+              <div class="about-div-detail-pic-icon">
+                <img src="./Assets/About-section/online.png" alt="" />
+              </div>
+              <div class="about-div-detail-pic-detail">
+                <h2>Online Food Delivary</h2>
+                <p>
+                  Excellence projecting is devonshire dispatched remarkably on
+                  estimating.
+                </p>
+              </div>
+            </div>
+
+            <div class="about-div-detail authentic">
+              <div class="about-div-detail-pic-icon">
+                <img src="./Assets/About-section/authentic.png" alt="" />
+              </div>
+              <div class="about-div-detail-pic-detail">
+                <h2>Authentic food</h2>
+                <p>
+                  Regularity projecting is devonshire dispatched remarkably on
+                  estimating.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img id="patta" src="./Assets/About-section/patta.png" alt="" />
+        <img id="tomato" src="./Assets/About-section/tomato.png" alt="" />
+      </section>
+    </main>
+
+    <script>
+      const slides = document.querySelectorAll(".slide");
+      let current = 0;
+
+      document.getElementById("next").addEventListener("click", () => {
+        slides[current].classList.remove("active");
+        current = (current + 1) % slides.length;
+        slides[current].classList.add("active");
+      });
+
+      document.getElementById("prev").addEventListener("click", () => {
+        slides[current].classList.remove("active");
+        current = (current - 1 + slides.length) % slides.length;
+        slides[current].classList.add("active");
+      });
+    </script>
   </body>
 </html>
