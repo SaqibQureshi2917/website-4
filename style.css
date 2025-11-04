@@ -208,6 +208,10 @@ nav {
 }
 .section-top {
   display: flex;
+  color: #e7272d;
+}
+.section-top img{
+  margin: 0 10px;
 }
 .section-heading {
   width: 50%;
