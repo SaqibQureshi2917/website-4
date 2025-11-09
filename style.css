@@ -524,7 +524,6 @@ nav {
   .card{
   height: 750px;
 width: 500px;
-background-color: white;
 }
 }
 @media (max-width: 578px) {
@@ -540,6 +539,7 @@ background-color: white;
   .discout-pic > div {
     height: 25vw;
     width: 25vw;
+    padding: 10px;
   }
   .discout-pic img {
     height: 18vw;
@@ -577,4 +577,9 @@ background-color: white;
   .about-div-detail {
     width: 90%;
   }
+
+   .card{
+  height: 130vw;
+width: 90%;
+}
 }
