@@ -60,8 +60,8 @@ nav {
   background-image: url(./Assets/Navbar-section/cart.svg);
   background-size: cover;
   background-position: center;
-  width: 65px;
-  height: 65px;
+  width: 55px;
+  height: 55px;
 }
 #cart-icon > p {
   font-family: "Courier New", Courier, monospace;
@@ -516,10 +516,167 @@ background-color: white;
 color: black;
 }
 /* ===================================================== About Section Styling End =====================================================  */
+
+.menus{
+  display: flex;
+}
+.single-menu{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px dotted rgb(215, 212, 212);
+}
+.menu-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 180px;
+  width: 650px;
+  padding: 30px;
+  border: 1px dotted rgb(215, 212, 212);
+  border-collapse: collapse;
+}
+.menu-item img{
+  height: 100px;
+}
+.menu-item div{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.menu-item div>h2>span{
+background-color: #e7272d;
+color: white;
+font-family: "lato";
+font-size: 16px;
+padding: 5px 15px;
+border-radius: 5px;
+text-transform: uppercase;
+margin-left: 20px;
+}
+.menu-item div>p{
+  font-size: 18px;
+  color: rgb(47, 46, 46);
+}
+.menu-item>h2{
+  font-family: "lato";
+  font-size: 35px;
+}
+
+
+.combo-offer{
+  height: 100vh;
+  width: 100%;
+  background-image: url(./Assets/Combo-Offer/background.jpeg);
+background-size: cover;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.combo-divs{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.offer-content-div{
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 150px;
+  gap: 20px;
+}
+.offer-content-div h3{
+  font-family: "Dancing-Script";
+  color: white;
+  font-size: 40px;
+}
+.offer-content-div h1{
+  font-size: 70px;
+  color: white;
+  width: 75%;
+  text-transform: uppercase;
+}
+.offer-content-div p{
+  color: white;
+  width: 70%;
+}
+.offer-img-div{
+  position: relative;
+}
+.offer-img-div h1{
+  position: absolute;
+  top: -70px;
+  left: 100px;
+  font-size: 35px;
+  font-family: "lato";
+  background-color: #e7272d;
+  height: 220px;
+  width: 220px;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(
+    50% 0%,
+    /* top middle */ 93.3% 25%,
+    /* top-right */ 93.3% 75%,
+    /* bottom-right */ 50% 100%,
+    /* bottom middle */ 6.7% 75%,
+    /* bottom-left */ 6.7% 25% /* top-left */
+  );
+}
+.offer-img-div h1>span{
+  text-decoration: line-through;
+  font-size: 30px;
+  margin-right: 10px;
+}
+#circle-img{
+  height: 500px;
+  border-radius: 50%;
+  border: 5px solid rgb(53, 52, 52);
+
+}
+#image-2{
+  position: absolute;
+  height: 250px;
+  bottom: -70px;
+  right: 100px;
+}
+
+
+
 @media (max-width: 1350px) {
   .deals-divs {
     width: 580px;
   }
+  .menu-item{
+    width: 560px;
+    height: 145px;
+  }
+  .menu-item img{
+    height: 84px;
+  }
+  .offer-content-div{
+    margin-left: 100px;
+  }
+  .offer-content-div h1{
+    width: 91%;
+  }
+  .offer-content-div p{
+    width: 90%;
+  }
+  .offer-img-div h1{
+    top: -90px;
+    left: 50px;
+  }
+  #circle-img{
+    height: 430px;
+  }
+  #image-2{
+    bottom: -100px;
+  }
+
 }
 @media (max-width: 1200px) {
   .hero-right-side-div {
@@ -574,6 +731,26 @@ color: black;
 .div-absolute{
 right: 280px;
 }
+
+.menus{
+  flex-direction: column;
+  gap: 30px;
+}
+.menu-item{
+  width: 900px;
+  height: 200px;
+}
+.menu-item img{
+  height: 150px;
+  margin-left: 60px;
+}
+.offer-content-div{
+  margin-left: 80px;
+}
+.offer-content-div h1{
+  font-size: 55px;
+}
+
 }
 @media (max-width: 992px) {
   nav {
@@ -650,6 +827,48 @@ right: 280px;
   margin-top: 30px;
 }
 
+.menu-item{
+  width: 700px;
+  height: 150px;
+}
+.menu-item img{
+  height: 120px;
+  margin-left: 20px;
+}
+.combo-offer{
+  flex-direction: column;
+  gap: 200px;
+  height: 200vh;
+background-position: center;
+}
+.combo-divs{
+  width: 80%;
+}
+.offer-content-div{
+  align-items: center;
+  margin-left: 0;
+}
+.offer-content-div h1{
+  font-size: 70px;
+  text-align: center;
+}
+.offer-content-div p{
+  text-align: center;
+  width: 93%;
+}
+.offer-img-div h1{
+    top: -100px;
+    left: 250px;
+  }
+  #circle-img{
+    height: 600px;
+  }
+  #image-2{
+    bottom: -100px;
+  }
+
+
+
 }
 @media (max-width: 768px) {
   .carousel {
@@ -709,6 +928,28 @@ right: 280px;
  .deals-second-div h3{
   position: static;
  }
+ .single-menu{
+  border: none;
+  gap: 40px;
+ }
+.menu-item{
+  flex-direction: column;
+  height: 500px;
+  width: 520px;
+  border-radius: 20px;
+  justify-content: space-around;
+}
+.menu-item img{
+  height: 200px;
+}
+.menu-item div>h2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
 }
 @media (max-width: 578px) {
   .carousel {
@@ -774,4 +1015,10 @@ right: 280px;
   text-align: center;
 }
 
+.menus{
+  width: 90%;
+}
+.menu-item{
+  width: 100%;
+}
 }
